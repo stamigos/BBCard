@@ -145,8 +145,6 @@ INSTALLED_APPS = (
     'pagination',
 )
 
-DISQUS_API_KEY = 'JsmVzQIDhUorhujISUP9FcWgKfs2OQfCLQ4acJAgsACbbbpTTL2eGCKv6rVrft5x'
-DISQUS_WEBSITE_SHORTNAME = 'bbcard'
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
