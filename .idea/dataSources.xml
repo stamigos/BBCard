@@ -4,7 +4,7 @@
     <data-source source="LOCAL" name="Django default" uuid="3dc5c784-e039-4ea4-94d3-d13d72f094cb">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://10.0.0.2/$PROJECT_DIR$/BBCard/stamigos_bbcard</jdbc-url>
+      <jdbc-url>jdbc:mysql://10.0.0.2:3306/$PROJECT_DIR$/BBCard/stamigos_bbcard</jdbc-url>
       <user-name>stamigos_django</user-name>
       <user-password>dfcfdfc6dfcfdfc4dfcbdfc7dfcfdfc6dfc4dfc3dfc1</user-password>
       <libraries>

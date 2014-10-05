@@ -22,7 +22,7 @@ DATABASES = {
         'USER': 'stamigos_django',
         'PASSWORD': 'elenamelnik',
         'HOST': '10.0.0.2',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
+        'PORT': '3306',                      # Set to empty string for default.
     }
 }
 
