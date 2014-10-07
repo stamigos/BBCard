@@ -20,7 +20,7 @@
 }
 .tag-cloud:after {
     color: #000000;
-    content: " ×";
+    /*content: " ×";*/
     font-size: 20px;
     font-weight: normal;
     line-height: 16px;
