@@ -18,6 +18,19 @@
     </header>
 {% endblock %}
 
+{% block additional %}
+    {% for post in object_list %}
+        <h3>категория: <a href="category/{{ post.category }}">
+                                        {{ post.category}}</a><h3>
+	<div class="tags">ключевые слова:
+	{% for tag in post.tag.all %}
+		<a href="tag/{{ tag }}">{{ tag }}</a>
+		{% if not forloop.last %}, {% endif %}
+	{% endfor %}
+	</div>
+    {% endfor %}
+{% endblock %}
+
 {% block content %}
     <!-- Post Content -->
     <article>
@@ -30,20 +43,6 @@
         </div>
     </article>
     <hr>
-
-    <div class="container">
-    {% for post in object_list %}
-
-        <h3>категория: <a href="category/{{ post.category }}">
-                                        {{ post.category}}</a><h3>
-	<div class="tags">ключевые слова:
-	{% for tag in post.tag.all %}
-		<a href="tag/{{ tag }}">{{ tag }}</a>
-		{% if not forloop.last %}, {% endif %}
-	{% endfor %}
-	</div>
-    {% endfor %}
-    </div>
 
   <div id="disqus_thread"></div>
     <script type="text/javascript">
