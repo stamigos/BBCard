@@ -18,19 +18,6 @@
     </header>
 {% endblock %}
 
-{% block additional %}
-
-    <ul id="tag-cloud">
-    <li>Категория: <a href="category/{{ post.category }}">{{ post.category}}</a></li>
-    <li>Теги:</li>
-    	{% for tag in post.tag.all %}
-             <li class="tag-cloud tag-cloud-success"><a href="tag/{{ tag }}">{{ tag }}</a></li>
-	    {% endfor %}
-    </ul>
-
-
-{% endblock %}
-
 {% block content %}
     <!-- Post Content -->
     <article>
@@ -44,6 +31,24 @@
     </article>
     <hr>
 
+{% endblock %}
+
+
+{% block additional %}
+
+    <ul id="tag-cloud">
+    <li>Категория:</li>
+    <li class="tag-cloud-success"><a href="category/{{ post.category }}">{{ post.category}}</a></li>
+    <li>Теги:</li>
+    	{% for tag in post.tag.all %}
+             <li class="tag-cloud tag-cloud-success"><a href="tag/{{ tag }}">{{ tag }}</a></li>
+	    {% endfor %}
+    </ul>
+
+
+{% endblock %}
+
+{% block comments %}
   <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -58,5 +63,4 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
 {% endblock %}

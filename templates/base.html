@@ -90,14 +90,18 @@
     </header>
 {% endblock %}
 
-<div class="container">
-{% block additional %}
-    Дополнительная зона
-{% endblock %}
-</div>
+
     <div class="container">
      {% block content %}Пустая страница{% endblock %}
     </div> <!-- container -->
+    <div class="container">
+    {% block additional %}{% endblock %}
+    </div>
+
+    <div class="container">
+        {% block comments %}
+        {% endblock %}
+    </div>
 
     <!-- Footer -->
     <footer>
