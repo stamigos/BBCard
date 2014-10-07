@@ -39,6 +39,9 @@
     <ul id="tag-cloud">
     <li>Категория:</li>
     <li class="tag-cloud-success"><a href="category/{{ post.category }}">{{ post.category}}</a></li>
+    </ul>
+
+    <ul id="tag-cloud">
     <li>Теги:</li>
     	{% for tag in post.tag.all %}
              <li class="tag-cloud tag-cloud-success"><a href="tag/{{ tag }}">{{ tag }}</a></li>
