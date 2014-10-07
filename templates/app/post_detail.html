@@ -19,11 +19,11 @@
 {% endblock %}
 
 {% block additional %}
-        <h3>категория: <a href="category/{{ post.category }}">
-                                        {{ post.category}}</a><h3>
-	<div class="tags">ключевые слова:
+    <h4>Категория: <a href="category/{{ post.category }}">
+                                        {{ post.category}}<h4>
+	<div class="tags">Теги:
 	{% for tag in post.tag.all %}
-		<a href="tag/{{ tag }}">{{ tag }}</a>
+		<h4><a href="tag/{{ tag }}">{{ tag }}</a></h4>
 		{% if not forloop.last %}, {% endif %}
 	{% endfor %}
 	</div>
