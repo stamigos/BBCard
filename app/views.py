@@ -10,7 +10,7 @@ def category(request, id):
     category = Category.objects.select_related().get(id=id)
     posts = category.post_set.all()
     slug = translit.slugify(Category.name)
-   # category.ct_slug = slug
+    category.ct_slug = slug
     return render(request, 'category.html', {'posts': posts,
                                              'category': category,
                                              'ct_slug': slug})
@@ -20,7 +20,7 @@ def tag(request, id):
     tag = Tag.objects.select_related().get(id=id)
     posts = tag.post_set.all()
     slug = translit.slugify(Tag.name)
-   # tag.tg_slug = slug
+    tag.tg_slug = slug
     return render(request, 'tagpage.html', {'posts': posts,
                                             'tag': tag,
                                             'tg_slug': slug})
