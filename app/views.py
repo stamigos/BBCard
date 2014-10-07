@@ -6,24 +6,24 @@ from django.views.generic import ListView, DetailView
 from django.shortcuts import render
 
 
-def category(request, id):
+def category(request, id, slug):
     category = Category.objects.select_related().get(id=id)
     posts = category.post_set.all()
-    slug = translit.slugify(category.name)
-    category.ct_slug = slug
+    slug = translit.slugify(Category.name)
+   # category.ct_slug = slug
     return render(request, 'category.html', {'posts': posts,
                                             'category': category,
-                                            'slug': slug})
+                                            'ct_slug': slug})
 
 
-def tag(request, id):
+def tag(request, id, slug):
     tag = Tag.objects.select_related().get(id=id)
     posts = tag.post_set.all()
-    slug = translit.slugify(tag.name)
-    tag.tg_slug = slug
+    slug = translit.slugify(Tag.name)
+   # tag.tg_slug = slug
     return render(request, 'tagpage.html', {'posts': posts,
                                             'tag': tag,
-                                            'slug': slug})
+                                            'tg_slug': slug})
 
 
 class PostsListView(ListView):
