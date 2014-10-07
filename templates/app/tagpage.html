@@ -1,0 +1,11 @@
+{% extends "base.html" %} // главный шаблон
+/* имя нашей вобранной категории */
+{% block title %}Статьи по тегу - {{ tag.name }}{% endblock title %}
+{% block content %}
+    /* выводим наш выбранный тег */
+    <h2>Статьи по тегу - {{ tag.name }}:</h2>
+    	{% for post in posts %} # делаем цикличную выборку наших статей
+            /* выводим список ссылок на статьи из выбранной категории */
+        	<p><a href="/blog/{{ post.id }}">{{ post.title }}</a></p>
+    	{% endfor %}
+{% endblock content %}

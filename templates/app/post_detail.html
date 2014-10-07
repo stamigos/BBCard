@@ -25,14 +25,27 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <p>{{ post.content }}</p>
-                  <!--  <p>
-                  а-ля дискас
-                    </p>-->
                 </div>
             </div>
         </div>
     </article>
     <hr>
+    /*циклично выбираем все данные из модели post для всех наших статей*/
+    {% for post in object_list %}
+        /*тут название статьи*/
+        /*выводим категорию*/
+        <h3>категория: <a href="category/{{ post.category }}">
+                                        {{ post.category}}</a><h3>
+	/*тут текст нашей статьи*/
+	<div class="tags">ключевые слова:
+	{% for tag in post.tag.all %} /*делаем проход по нашим тегам*/
+		<a href="tag/{{ tag }}">{{ tag }}</a> /*выводим их на экран*/
+                /*ставим между тегами запятые*/
+		{% if not forloop.last %}, {% endif %}
+	{% endfor %}
+	</div>
+    {% endfor %}
+
   <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
