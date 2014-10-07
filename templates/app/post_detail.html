@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-<script src="{{ STATIC_URL }}js/bootstrap-tag-cloud.js"></script>
+
 {% block header %}
     <link href="{{ STATIC_URL }}css/bootstrap-tag-cloud.css" rel="stylesheet">
         <!-- Page Header -->
@@ -20,6 +20,7 @@
 {% endblock %}
 
 {% block additional %}
+    <script src="{{ STATIC_URL }}js/bootstrap-tag-cloud.js"></script>
     <p>Категория: <a href="category/{{ post.category }}">
                                         {{ post.category}}<p>
     <p>Теги:</p>
