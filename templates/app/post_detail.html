@@ -30,6 +30,8 @@
         </div>
     </article>
     <hr>
+
+    <div class="container">
     {% for post in object_list %}
 
         <h3>категория: <a href="category/{{ post.category }}">
@@ -41,6 +43,7 @@
 	{% endfor %}
 	</div>
     {% endfor %}
+    </div>
 
   <div id="disqus_thread"></div>
     <script type="text/javascript">
