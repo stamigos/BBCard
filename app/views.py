@@ -12,8 +12,8 @@ def category(request, id):
     slug = translit.slugify(Category.name)
    # category.ct_slug = slug
     return render(request, 'category.html', {'posts': posts,
-                                            'category': category,
-                                            'ct_slug': slug})
+                                             'category': category,
+                                             'ct_slug': slug})
 
 
 def tag(request, id):
