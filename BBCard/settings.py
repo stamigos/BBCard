@@ -144,6 +144,7 @@ INSTALLED_APPS = (
     'app',
     'pagination',
     'disqus',
+    'south',
 )
 
 #disqus parameters
