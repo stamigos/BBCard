@@ -38,13 +38,16 @@
 
     <ul id="tag-cloud">
     <li>Категория:</li>
-    <li class="tag-cloud tag-cloud-success"><a href="category/{{ category.slug }}">{{ post.category}}</a></li>
+    {% for category in post.category.all %}
+
+    {% endfor %}
+    <li class="tag-cloud tag-cloud-success"><a href="category/{{ post.ct_slug }}">{{ post.category}}</a></li>
     </ul>
 
     <ul id="tag-cloud">
     <li>Теги:</li>
     	{% for tag in post.tag.all %}
-             <li class="tag-cloud tag-cloud-success"><a href="tag/{{ tag.slug }}">{{ tag }}</a></li>
+             <li class="tag-cloud tag-cloud-success"><a href="tag/{{ tag.tg_slug }}">{{ tag }}</a></li>
 	    {% endfor %}
     </ul>
 

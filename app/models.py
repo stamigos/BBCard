@@ -5,7 +5,7 @@ from django.db import models
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=100)
-    slug = models.CharField(max_length=100, editable=False)
+    ct_slug = models.CharField(max_length=100, editable=False)
 
     def __unicode__(self):
         return self.name
@@ -13,7 +13,7 @@ class Category(models.Model):
 
 class Tag(models.Model):
     name = models.CharField(max_length=50)
-    slug = models.CharField(max_length=50, editable=False)
+    tg_slug = models.CharField(max_length=50, editable=False)
 
     def __unicode__(self):
         return self.name
@@ -26,6 +26,8 @@ class Post(models.Model):
     content = models.TextField(max_length=10000)
     category = models.ForeignKey(Category)
     tag = models.ManyToManyField(Tag)
+    ct_slug = models.ForeignKey(Category)
+    tg_slug = models.ForeignKey(Tag)
 
     def __unicode__(self):
         return self.title

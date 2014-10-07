@@ -10,19 +10,19 @@ def category(request, id):
     category = Category.objects.select_related().get(id=id)
     posts = category.post_set.all()
     slug = translit.slugify(category.name)
-    category.slug = slug
+    Category.ct_slug = slug
     return render(request, 'category.html', {'posts': posts,
-                                            'category': category, 'slug': slug})
+                                            'category': category, 'slug': Category.ct_slug})
 
 
 def tag(request, id):
     tag = Tag.objects.select_related().get(id=id)
     posts = tag.post_set.all()
     slug = translit.slugify(tag.name)
-    tag.slug = slug
+    Tag.tg_slug = slug
     return render(request, 'tagpage.html', {'posts': posts,
                                             'tag': tag,
-                                            'slug': slug})
+                                            'slug': Tag.tg_slug})
 
 
 class PostsListView(ListView):
