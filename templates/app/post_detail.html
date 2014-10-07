@@ -23,8 +23,8 @@
                                         {{ post.category}}<h4>
 	<div class="tags">Теги:
 	{% for tag in post.tag.all %}
-		<h4><a href="tag/{{ tag }}">{{ tag }}{% if not forloop.last %}, {% endif %}<h4>
-	{% endfor %}
+		<h4><a href="tag/{{ tag }}">{{ tag }}{% if not forloop.last %}, {% endif %}
+	{% endfor %}<h4>
 	</div>
 
 {% endblock %}
