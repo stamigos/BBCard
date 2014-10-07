@@ -5,18 +5,23 @@ from django.db import models
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=100)
-    ct_slug = models.CharField(max_length=100)
+    ct_slug = models.CharField(max_length=100, editable=False)
 
     def __unicode__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return "/%s/" % self.cg_slug
 
 class Tag(models.Model):
     name = models.CharField(max_length=50)
-    tg_slug = models.CharField(max_length=50)
+    tg_slug = models.CharField(max_length=50, editable=False)
 
     def __unicode__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return "/%s/" % self.tg_slug
 
 
 class Post(models.Model):
