@@ -6,7 +6,7 @@ from django.views.generic import ListView, DetailView
 from django.shortcuts import render
 
 
-def category(request, id, slug):
+def category(request, id):
     category = Category.objects.select_related().get(id=id)
     posts = category.post_set.all()
     slug = translit.slugify(Category.name)
@@ -16,7 +16,7 @@ def category(request, id, slug):
                                             'ct_slug': slug})
 
 
-def tag(request, id, slug):
+def tag(request, id):
     tag = Tag.objects.select_related().get(id=id)
     posts = tag.post_set.all()
     slug = translit.slugify(Tag.name)
