@@ -11,7 +11,7 @@ class Category(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return "/%s/" % self.cg_slug
+        return "/%i/" % self.id
 
 class Tag(models.Model):
     name = models.CharField(max_length=50)
@@ -21,7 +21,7 @@ class Tag(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return "/%s/" % self.tg_slug
+        return "/%i/" % self.id
 
 
 class Post(models.Model):
