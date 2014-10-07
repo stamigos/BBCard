@@ -1,8 +1,8 @@
-{% extends "base.html" %} // главный шаблон
-/* имя нашей вобранной категории */
+{% extends "base.html" %}
+
 {% block title %}Статьи по тегу - {{ tag.name }}{% endblock title %}
 {% block content %}
-    /* выводим наш выбранный тег */
+
     <h2>Статьи по тегу - {{ tag.name }}:</h2>
     	{% for post in posts %}
         	<p><a href="/{{ post.id }}">{{ post.title }}</a></p>

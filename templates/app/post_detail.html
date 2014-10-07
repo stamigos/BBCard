@@ -30,17 +30,13 @@
         </div>
     </article>
     <hr>
-    /*циклично выбираем все данные из модели post для всех наших статей*/
     {% for post in object_list %}
-        /*тут название статьи*/
-        /*выводим категорию*/
+
         <h3>категория: <a href="category/{{ post.category }}">
                                         {{ post.category}}</a><h3>
-	/*тут текст нашей статьи*/
 	<div class="tags">ключевые слова:
-	{% for tag in post.tag.all %} /*делаем проход по нашим тегам*/
-		<a href="tag/{{ tag }}">{{ tag }}</a> /*выводим их на экран*/
-                /*ставим между тегами запятые*/
+	{% for tag in post.tag.all %}
+		<a href="tag/{{ tag }}">{{ tag }}</a>
 		{% if not forloop.last %}, {% endif %}
 	{% endfor %}
 	</div>
