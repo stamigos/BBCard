@@ -13,6 +13,7 @@ class Category(models.Model):
     def get_absolute_url(self):
         return "/%i/" % self.id
 
+
 class Tag(models.Model):
     name = models.CharField(max_length=50)
     tg_slug = models.CharField(max_length=50, editable=False)
