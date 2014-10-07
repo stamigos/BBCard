@@ -26,8 +26,7 @@ class Post(models.Model):
     content = models.TextField(max_length=10000)
     category = models.ForeignKey(Category)
     tag = models.ManyToManyField(Tag)
-    ct_slug = models.ForeignKey(Category)
-    tg_slug = models.ForeignKey(Tag)
+    ct_slug = models.ManyToManyField(Category)
 
     def __unicode__(self):
         return self.title
