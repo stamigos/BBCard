@@ -19,7 +19,6 @@
 {% endblock %}
 
 {% block additional %}
-    {% for post in object_list %}
         <h3>категория: <a href="category/{{ post.category }}">
                                         {{ post.category}}</a><h3>
 	<div class="tags">ключевые слова:
@@ -28,7 +27,7 @@
 		{% if not forloop.last %}, {% endif %}
 	{% endfor %}
 	</div>
-    {% endfor %}
+
 {% endblock %}
 
 {% block content %}
