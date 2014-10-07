@@ -12,8 +12,7 @@ def category(request, id):
     slug = translit.slugify(category.name)
     category.ct_slug = slug
     return render(request, 'category.html', {'posts': posts,
-                                             'category': category,
-                                             'ct_slug': slug},)
+                                             'category': category},)
 
 
 def tag(request, id):
@@ -22,8 +21,7 @@ def tag(request, id):
     slug = translit.slugify(tag.name)
     tag.tg_slug = slug
     return render(request, 'tagpage.html', {'posts': posts,
-                                            'tag': tag,
-                                            'tg_slug': slug},)
+                                            'tag': tag},)
 
 
 class PostsListView(ListView):
