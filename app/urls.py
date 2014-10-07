@@ -12,7 +12,6 @@ url(r'^news/$', PostsListView.as_view(), name='news'),
 url(r'^about/$', TemplateView.as_view(template_name='about.html'), name='about'),
 url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
 url(r'^services/$', TemplateView.as_view(template_name='services.html'), name='services'),
-# выборку будем делать по id, представление - category
-url(r'^category/(?P<id>\d+)$', 'category'),
-url(r'^tag/(?P<id>\d+)/$', 'tag'), # тут тоже самое
+url(r'^category/(?P<id>\d+)$', 'app.views.category'),
+url(r'^tag/(?P<id>\d+)/$', 'app.views.tag'),
 )
