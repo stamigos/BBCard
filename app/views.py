@@ -13,7 +13,7 @@ def category(request, id):
     category.ct_slug = slug
     return render(request, 'category.html', {'posts': posts,
                                              'category': category,
-                                             'ct_slug': slug})
+                                             'ct_slug': slug},)
 
 
 def tag(request, id):
@@ -23,7 +23,7 @@ def tag(request, id):
     tag.tg_slug = slug
     return render(request, 'tagpage.html', {'posts': posts,
                                             'tag': tag,
-                                            'tg_slug': slug})
+                                            'tg_slug': slug},)
 
 
 class PostsListView(ListView):
