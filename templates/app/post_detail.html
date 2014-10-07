@@ -21,11 +21,14 @@
 {% block additional %}
     <p>Категория: <a href="category/{{ post.category }}">
                                         {{ post.category}}<p>
-	<div>Теги:
-	{% for tag in post.tag.all %}
-		<a href="tag/{{ tag }}">{{ tag }}</a>{% if not forloop.last %}, {% endif %}
+    <p>Теги:</p>
+    <ul id="tag-cloud">
+    	{% for tag in post.tag.all %}
+		<a href="tag/{{ tag }}">{{ tag }}</a>
+        {% if not forloop.last %}, {% endif %}
 	{% endfor %}
-	</div>
+    </ul>
+
 
 {% endblock %}
 
