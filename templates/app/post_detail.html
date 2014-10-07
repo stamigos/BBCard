@@ -24,7 +24,7 @@
     <p>Теги:</p>
     <ul id="tag-cloud">
     	{% for tag in post.tag.all %}
-		<a href="tag/{{ tag }}">{{ tag }}</a>
+             <li class="tag-cloud tag-cloud-info"><a href="tag/{{ tag }}">{{ tag }}</a></li>
         {% if not forloop.last %}, {% endif %}
 	{% endfor %}
     </ul>
