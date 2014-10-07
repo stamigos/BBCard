@@ -35,7 +35,9 @@
     <hr>
     <p>
     {% load disqus_tags %}
+    {% set_disqus_identifier post.id %}
+    {% set_disqus_url post.get_absolute_url %}
     {% disqus_dev %}
-    {% disqus_show_comments "stamigosdjangohostname"%}
+    {% disqus_show_comments %}
     </p>
 {% endblock %}
