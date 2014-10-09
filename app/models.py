@@ -27,7 +27,7 @@ class Tag(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
-    subtitle = models.CharField(max_length=255)
+    subtitle = models.CharField(max_length=255, blank=True)
     datetime = models.DateTimeField(u'Дата публикации')
     content = models.TextField(max_length=10000)
     category = models.ForeignKey(Category)
