@@ -408,9 +408,26 @@ body {
     font-weight: normal;
 }
 @font-face {
+    font-family: annabelle;
+    src: url(fonts/annabelle.woff) format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: annabelle;
+    src: url(fonts/annabelle.eot);
+    src: url(fonts/annabelle.eot?#iefix) format("embedded-opentype");
+}
+@font-face {
+    font-family: annabelle;
+    src: url(fonts/annabelle.svg) format("svg");
+}
+
+@font-face {
     font-family: boyarsky;
     src: url(fonts/BoyarskyBoldItalic.ttf);
 }
+
 @font-face {
     font-family: cassandra;
     src: url(fonts/Cassandra%202.ttf);
