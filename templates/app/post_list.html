@@ -26,8 +26,8 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-preview">
                    {% for post in object_list %}
-                    <h2 class="post-title" style="font-family : 'Georgia', Times New Roman, Times, serif; font-size: 24px;"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
-                    <h4 class="post-subtitle" style="font-family : 'Georgia', Times New Roman, Times, serif; font-size: 20px;">{{ post.subtitle }}</h4>
+                    <h2 class="post-title" style="font-family : 'Georgia', Times New Roman, Times, serif;"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+                    <h4 class="post-subtitle" style="font-family : 'Georgia', Times New Roman, Times, serif;">{{ post.subtitle }}</h4>
                     <p class="post-meta">Добавлено: <a href="{%  url 'contact' %}">Елена Мельникова</a> {{ post.datetime }}</p>
                     {% empty %}
                     <p style="font-family : 'Georgia', Times New Roman, Times, serif;">Нет постов</p>
