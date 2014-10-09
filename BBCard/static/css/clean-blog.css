@@ -22,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: /*'Open Sans', 'Helvetica Neue', Helvetica, Arial,*/ sans-serif;
+  font-family: /*'Open Sans', 'Helvetica Neue', Helvetica, Arial,*/ "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
   font-weight: 800;
 }
 a {
@@ -52,7 +52,7 @@ hr.small {
   left: 0;
   width: 100%;
   z-index: 3;
-  font-family: /*'Open Sans', 'Helvetica Neue', Helvetica, Arial,*/ sans-serif;
+  font-family: /*'Open Sans', 'Helvetica Neue', Helvetica, Arial,*/ "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
@@ -393,3 +393,8 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
+@font-face {
+    font-family: monotype corsiva;
+    src: url(fonts/monotype_corvia.ttf);
+}
+
