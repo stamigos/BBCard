@@ -403,24 +403,13 @@ body {
 }
 @font-face {
     font-family: annabelle;
-    src: url(fonts/Annabelle.ttf);
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: annabelle;
+    src: url(fonts/annabelle.ttf) format("truetype");
     src: url(fonts/annabelle.woff) format("woff");
+    src: url(fonts/annabelle.eot#) format("eot");
+    src: url(fonts/annabelle.eot?#iefix) format("embedded-opentype");
+    src: url(fonts/annabelle.svg#svgFontName) format("svg");
     font-style: normal;
     font-weight: normal;
-}
-@font-face {
-    font-family: annabelle;
-    src: url(fonts/annabelle.eot);
-    src: url(fonts/annabelle.eot?#iefix) format("embedded-opentype");
-}
-@font-face {
-    font-family: annabelle;
-    src: url(fonts/annabelle.svg) format("svg");
 }
 
 @font-face {
