@@ -5,7 +5,8 @@
  */
 
 body {
-  font-family: /*'Lora', 'Times New Roman',*/ serif;
+  /*font-family: 'Lora', 'Times New Roman',*/;
+  font: monotypecorsiva;
   font-size: 20px;
   color: #404040;
 }
@@ -22,7 +23,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: /*'Open Sans', 'Helvetica Neue', Helvetica, Arial,*/ "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
+  /*font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  font: monotypecorsiva;
   font-weight: 800;
 }
 a {
@@ -394,7 +396,26 @@ body {
   webkit-tap-highlight-color: #0085a1;
 }
 @font-face {
-    font-family: monotype corsiva;
+    font-family: monotypecorsiva;
     src: url(fonts/monotype_corvia.ttf);
+    font-style: normal;
+    font-weight: normal;
 }
+@font-face {
+    font-family: annabelle;
+    src: url(fonts/Annabelle.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: boyarsky;
+    src: url(fonts/BoyarskyBoldItalic.ttf);
+}
+@font-face {
+    font-family: cassandra;
+    src: url(fonts/Cassandra%202.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
 
