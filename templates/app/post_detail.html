@@ -37,14 +37,14 @@
 {% block additional %}
 
     <ul id="tag-cloud">
-    <li>Категория:</li>
-    <li class="tag-cloud tag-cloud-success"><a href="{{ post.get_absolute_url }}category/{{ post.category.id }}">{{ post.category}}</a></li>
+    <li style="font-family : 'Georgia', Times New Roman, Times, serif;">Категория:</li>
+    <li class="tag-cloud tag-cloud-success" style="font-family : 'Georgia', Times New Roman, Times, serif;"><a href="{{ post.get_absolute_url }}category/{{ post.category.id }}">{{ post.category}}</a></li>
     </ul>
 
     <ul id="tag-cloud">
-    <li>Теги:</li>
+    <li style="font-family : 'Georgia', Times New Roman, Times, serif;">Теги:</li>
     	{% for tag in post.tag.all %}
-             <li class="tag-cloud tag-cloud-success"><a href="{{ post.get_absolute_url }}tag{{ tag.get_absolute_url }}">{{ tag }}</a></li>
+             <li class="tag-cloud tag-cloud-success" style="font-family : 'Georgia', Times New Roman, Times, serif;"><a href="{{ post.get_absolute_url }}tag{{ tag.get_absolute_url }}">{{ tag }}</a></li>
 	    {% endfor %}
     </ul>
 
