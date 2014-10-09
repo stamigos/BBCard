@@ -3,7 +3,7 @@
 {% block title %}Статьи в категории - {{ category.name }}{% endblock title %}
 {% block content %}
 
-    <h2>Статьи в категории - {{ category.name }}:</h2>
+    <h2 style="font-family : 'Georgia', Times New Roman, Times, serif;">Статьи в категории - {{ category.name }}:</h2>
     	{% for post in posts %}
         	<p style="font-family : 'Georgia', Times New Roman, Times, serif;"><a href="/{{ post.id }}">{{ post.title }}</a></p>
 {% endfor %}
