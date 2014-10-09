@@ -8,9 +8,9 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1 style="font-family: annabelle">{{ post.title }}</h1>
-                        <h2 class="subheading" style="font-family: annabelle">{{ post.subtitle }}</h2>
-                        <span class="meta">Добавлено: <a href="{% url 'contact' %}">Елена Мельникова</a> {{ post.datetime }}</span>
+                        <h1 style="font-family : 'Georgia', Times New Roman, Times, serif;">{{ post.title }}</h1>
+                        <h2 class="subheading" style="font-family : 'Georgia', Times New Roman, Times, serif;">{{ post.subtitle }}</h2>
+                        <span class="meta" style="font-size: 20px;">Добавлено: <a href="{% url 'contact' %}">Елена Мельникова</a> {{ post.datetime }}</span>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
 {% block content %}
     <!-- Post Content -->
     <article>
-        <div class="container" style="font-family : 'Georgia', Times New Roman, Times, serif;">
+        <div class="container" style="font-family : 'Georgia', Times New Roman, Times, serif; font-size: 18px">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <p>{{ post.content }}</p>
@@ -30,7 +30,6 @@
         </div>
     </article>
     <hr>
-
 {% endblock %}
 
 
