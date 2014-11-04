@@ -26,10 +26,22 @@ DATABASES = {
 #        'PORT': '',                      # Set to empty string for default.
     }
 }
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+#        'NAME': os.path.join(BASE_DIR, 'bbcard.db'),
+ #       'NAME': 'meilawye_bbc',                      # Or path to database file if using sqlite3.
+ #       # The following settings are not used with sqlite3:
+#        'USER': 'meilawye_em',
+#        'PASSWORD': 'elenamelnikova',
+#        'HOST': '10.0.0.2',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+#        'PORT': '',                      # Set to empty string for default.
+#    }
+#}
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['stamigos.djangohost.name']
+ALLOWED_HOSTS = ['meilawyer.com.ua']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -146,7 +158,17 @@ INSTALLED_APPS = (
     'pagination',
     'disqus',
     'south',
+    'ckeditor',
 )
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Full',
+    },
+}
 
 #disqus parameters
 DISQUS_API_KEY = 'Md43IgT0JsYdtA0sQBglkGE5Mf0VI6aMg7WqXZV5jX2fnWzMAyAB5UQvSV1k9MAx'
