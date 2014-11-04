@@ -2,3 +2,4 @@ Django==1.5
 django-pagination==1.0.7
 disqus==0.0.4
 South==1.0
+django-ckeditor==4.4.6
