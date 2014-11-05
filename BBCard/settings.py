@@ -171,7 +171,7 @@ CKEDITOR_CONFIGS = {
 
 #disqus parameters
 DISQUS_API_KEY = 'Md43IgT0JsYdtA0sQBglkGE5Mf0VI6aMg7WqXZV5jX2fnWzMAyAB5UQvSV1k9MAx'
-DISQUS_WEBSITE_SHORTNAME = 'stamigosdjangohostname'
+DISQUS_WEBSITE_SHORTNAME = 'meilawyer'
 
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
